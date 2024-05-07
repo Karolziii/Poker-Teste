@@ -47,7 +47,7 @@ namespace poker.code.model.hand_ranks.ranks
                     foreach (Card c in find)
                     {
                         if (c.owner == 1)
-                            return find.Count == 5
+                            return true;
                     }
 
                 }
