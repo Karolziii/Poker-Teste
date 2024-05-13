@@ -15,10 +15,7 @@ namespace poker.code.model.hand_ranks.ranks
         // Construtor (classe / base)
         List<Card> player; // armazena as cartas do jogador
 
-        //---------------------------------------------------------------------------------
-        // Comportamentos
-        //---------------------------------------------------------------------------------
-        // Construtor (classe / base)        
+        //Construtor da classe FourOfKind
         public FourOfKind(List<List<Card>> h) : base(h)
         {
             player = new List<Card>();
@@ -28,6 +25,7 @@ namespace poker.code.model.hand_ranks.ranks
         // para o método abstrato da classe base
         public override bool check()
         {
+            // Verifica se a mão contém um Four of a Kind e se o jogador é o vencedor
             if (CheckFourOfKind() && FindWinner())
             {
                 return true;
@@ -36,7 +34,7 @@ namespace poker.code.model.hand_ranks.ranks
         }
 
         // Verifica se existe um Four Of Kind
-        // e coloca em <player>
+        // e armazena em <player>
         private bool CheckFourOfKind()
         {
             // Itera sobre os valores das cartas (2 a Ás)

@@ -13,21 +13,21 @@ namespace poker.code.model.hand_ranks.ranks
         // Estados
         //---------------------------------------------------------------------------------
         // Construtor (classe / base)
+
         List<Card> player; // armazena as cartas do jogador
 
-        //---------------------------------------------------------------------------------
-        // Comportamentos
-        //---------------------------------------------------------------------------------
-        // Construtor (classe / base)        
+        // Construtor da classe Full House
         public FullHouse(List<List<Card>> h) : base(h)
         {
+             // Inicializa a lista de cartas do jogador
             player = new List<Card>();
         }
 
         // Implementação específica da classe Full House
         // para o método abstrato da classe base
         public override bool check()
-        {
+        {   
+            // Verifica se a mão contém um Full House e se o jogador é o vencedor
             if (CheckFullHouse() && FindWinner())
             {
                 return true;
@@ -35,8 +35,8 @@ namespace poker.code.model.hand_ranks.ranks
             return false;
         }
 
-        // Verifica se existe um trio e um par
-        // e coloca em <player>
+        // Verifica se existe uma trinca (trio) e um par
+        // e armazena em <player>
         private bool CheckFullHouse()
         {
             // Variáveis para controlar a existência de um trio e um par
