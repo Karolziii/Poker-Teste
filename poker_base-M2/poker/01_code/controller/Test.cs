@@ -73,7 +73,11 @@ public class Test
                 draw_single(three);
                 break;
             case "05.csv":
-            
+                Straight straightCards = new Straight(histogram.get_histogram());
+                check_ = straightCards.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name = "04.csv - Straight";
+                draw_single(straightCards);
                 break;
             case "06.csv":
                 ShowText.print_text("Not implemented yet!");
