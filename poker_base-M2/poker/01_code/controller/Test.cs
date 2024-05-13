@@ -69,7 +69,7 @@ public class Test
                 ThreeofaKind three = new ThreeofaKind(histogram.get_histogram());
                 check_ = three.check();
                 Console.WriteLine("check_: " + check_);
-                rank_name = "04.csv - threeofakind";
+                rank_name = "04.csv - ThreeofaKind";
                 draw_single(three);
                 break;
             case "05.csv":
@@ -79,7 +79,11 @@ public class Test
                 ShowText.print_text("Not implemented yet!");
                 break;
             case "07.csv":
-                
+                FullHouse full = new FullHouse(histogram.get_histogram());
+                check_ = full.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name = "07.csv - FullHouse";
+                draw_single(full);
                 break;
             case "08.csv":
                 FourOfKind four = new FourOfKind(histogram.get_histogram());
