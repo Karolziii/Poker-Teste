@@ -59,7 +59,11 @@ public class Test
                 draw_single(one);
                 break;
             case "03.csv":
-                ShowText.print_text("Not implemented yet!");
+                TwoPair two = new TwoPair(histogram.get_histogram());
+                check_ = two.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name  = "03.csv - TwoPair";
+                draw_single(two);
                 break;
             case "04.csv":
                 ThreeofaKind three = new ThreeofaKind(histogram.get_histogram());
@@ -78,7 +82,7 @@ public class Test
                 
                 break;
             case "08.csv":
-                FourOfKind four = new ThreeofaKind(histogram.get_histogram());
+                FourOfKind four = new FourOfKind(histogram.get_histogram());
                 check_ = four.check();
                 Console.WriteLine("check_: " + check_);
                 rank_name = "08.csv - FourOfKind";
