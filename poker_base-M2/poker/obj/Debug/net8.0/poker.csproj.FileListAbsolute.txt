@@ -1,0 +1,15 @@
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\bin\Debug\net8.0\poker.exe
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\bin\Debug\net8.0\poker.deps.json
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\bin\Debug\net8.0\poker.runtimeconfig.json
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\bin\Debug\net8.0\poker.dll
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\bin\Debug\net8.0\poker.pdb
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.AssemblyInfoInputs.cache
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.AssemblyInfo.cs
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.csproj.CoreCompileInputs.cache
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.sourcelink.json
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.dll
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\refint\poker.dll
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.pdb
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\poker.genruntimeconfig.cache
+C:\Users\hu3gi\OneDrive\Documentos\Estrutura\Poker-Teste\Poker-Teste\poker_base-M2\poker\obj\Debug\net8.0\ref\poker.dll

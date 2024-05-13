@@ -52,7 +52,11 @@ public class Test
                 draw_single(high);
                 break;
             case "02.csv":
-                ShowText.print_text("Not implemented yet!");
+                OnePair one = new OnePair(histogram.get_histogram());
+                check_ = one.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name  = "02.csv - OnePair";
+                draw_single(one);
                 break;
             case "03.csv":
                 ShowText.print_text("Not implemented yet!");
