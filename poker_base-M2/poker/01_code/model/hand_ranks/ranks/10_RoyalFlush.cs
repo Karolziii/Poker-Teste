@@ -42,7 +42,17 @@ namespace poker.code.model.hand_ranks.ranks
                             find.Add(card);
                     }
                 }
-                return find.Count == 5;
+                if (find.Count == 5)
+                {
+                    foreach (Card c in find)
+                    {
+                        if (c.owner == 1)
+                            return true;
+                    }
+
+                }
+
+                //return find.Count == 5;
             }
             return false;
         }
