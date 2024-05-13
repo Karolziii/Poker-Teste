@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace poker.code.model.hand_ranks.ranks
 {
     /*
-    *   Classe para avaliar a categoria Full House.
+    *   Classe para avaliar a categoria Four of a Kind.
     *   Classe Base: Ranks
     */
     public class FourOfKind : Ranks

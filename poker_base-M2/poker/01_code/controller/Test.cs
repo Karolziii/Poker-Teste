@@ -75,10 +75,14 @@ public class Test
                 ShowText.print_text("Not implemented yet!");
                 break;
             case "07.csv":
-                ShowText.print_text("Not implemented yet!");
+                
                 break;
             case "08.csv":
-                ShowText.print_text("Not implemented yet!");
+                FourOfKind four = new ThreeofaKind(histogram.get_histogram());
+                check_ = four.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name = "08.csv - FourOfKind";
+                draw_single(four);
                 break;
             case "09.csv":
                 ShowText.print_text("Not implemented yet!");
