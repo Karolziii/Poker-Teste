@@ -73,7 +73,7 @@ public class Test
                 draw_single(three);
                 break;
             case "05.csv":
-                ShowText.print_text("Not implemented yet!");
+            
                 break;
             case "06.csv":
                 ShowText.print_text("Not implemented yet!");
