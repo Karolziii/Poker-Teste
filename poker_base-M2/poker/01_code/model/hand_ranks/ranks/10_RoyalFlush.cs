@@ -4,98 +4,103 @@ using System.Collections.Generic;
 namespace poker.code.model.hand_ranks.ranks
 {
     /*
-    *   Class to evaluate Straight rank.
+    *   Class to evaluate Royal Flush rank.
     *   Base Class: Ranks
     */
-    public class Straight : Ranks
+    public class RoyalFlush : Ranks
     {
         //---------------------------------------------------------------------------------
         //states
         //---------------------------------------------------------------------------------
         // constructor (class / base)
         List<Card> player; // armazena as cartas da pessoa
-        List<List<Card>> straightLists; // temporaria para a sequencia especifica
+        List<List<Card>> royal; // temporaria para a sequencia especifica
         
         //---------------------------------------------------------------------------------
         //behaviors
         //---------------------------------------------------------------------------------
         // constructor (class / base)        
-        public Straight(List<List<Card>> h) : base(h) 
+        public RoyalFlush (List<List<Card>> h) : base (h) 
         {
             player = new List<Card>();
-            straightLists = new List<List<Card>>();
+            royal = new List<List<Card>>();
         }
         
-        //implementacao especifica da classe Straight
+        //implementacao especifica da classe RoyalFlush
         //para o metodo abstrato da classe base
-        public override bool Check()
+        public override bool check()
         {
-            if (CheckStraight() && FindWinner())
+            if(chek_straight() && faind_woner())
             {
-                Semantic.Suit suit = FindSuit();
-                foreach (var cardsList in straightLists)
+                Semantic.Suit suit_royal = find_suit();
+                foreach (var cards_list in royal)
                 {
-                    foreach (var card in cardsList)
+                    foreach (var card in cards_list)
                     {
-                        if (card.Suit == suit)
-                            Find.Add(card);
+                        if (card.suit_ == suit_royal)
+                            find.Add(card);
                     }
                 }
-                if (Find.Count == 5)
+                if (find.Count == 5)
                 {
-                    foreach (Card c in Find)
+                    foreach (Card c in find)
                     {
-                        if (c.Owner == 1)
+                        if (c.owner == 1)
                             return true;
                     }
+
                 }
+
+                //return find.Count == 5;
             }
             return false;
         }
 
-        // verifica se existem cartas nas posicoes que satisfacam a sequencia 2, 3, ..., 10, J, Q, K, A 
-        // e separa de <lists> as listas especificas da sequencia, colocando em <straightLists> 
-        private bool CheckStraight()
+        //verifica se existem cartas nas posicoes que satisfacam 
+        //a sequencia 10/11/12/13/14 
+        //separa de <lists> as listas especificas da sequencia
+        //e coloca em <royal> 
+        private bool chek_straight()
         {
-            int count = 0;
-            for (int i = 2; i < 15; i++)
+            int cout = 0;
+            for (int i = 10 ; i < 15 ; i++)
             {
-                if (RanksHisto[i].Count > 0)                
-                    count++;
+                if(ranks_histo[i].Count > 0 )                
+                    cout++;
             }       
-            return count == 5 ? true : false;
+            return cout == 5 ? true : false;
         }
         
-        // verifica se existe em <straightLists> uma ou duas cartas da pessoa e, caso exista, coloca em <player>
-        private bool FindWinner()
+        //verifica se existe em <royal> uma ou duas cartas da pessoa
+        //caso exista coloca em <player>
+        private bool faind_woner()
         {
-            for (int i = 2; i < 15; i++)
-                straightLists.Add(ValueCopy(RanksHisto[i]));
+            for (int i = 10; i < 15; i++)
+                royal.Add(value_copy(ranks_histo[i]));
             
-            foreach(var list_ in straightLists)
+            foreach(var list_ in royal)
             {
-                foreach (var card in list_)
+                foreach (var Card in list_)
                 {
-                    if(card.Owner == 1)
+                    if(Card.owner == 1)
                     {
-                        player.Add(card);
+                        player.Add(Card);
                     }
                 }
             }
             return player.Count > 0 ? true : false;
         }    
-
-        // define o naipe para validar
-        private Semantic.Suit FindSuit()
+        // to define the suit to validate
+        private Semantic.Suit find_suit()
         {
-            // neste ponto, obrigatoriamente terá uma lista com um card ...
-            Semantic.Suit suit = new Semantic.Suit();
-            foreach (var cards in straightLists)
+            //neste ponto oobrigatoriamente terá uma lista com um card ...
+            Semantic.Suit s = new Semantic.Suit();
+            foreach (var cards in royal)
             {
                 if (cards.Count == 1)
-                    suit = cards[0].Suit;
+                    s = cards[0].suit_;
             }
-            return suit;
+            return s;
         }
     }
 }
