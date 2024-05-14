@@ -1,11 +1,11 @@
 
-//m4rc3lo - 2024-04-23
 using System;
 using System.Collections.Generic;
-//comentar toda classe
+
 namespace poker.code.model;
 public class Croupier : Person 
 {
+    // Declaração de um campo privado chamado cards, que é uma pilha (Stack) de objetos do tipo Card
     private Stack<Card> cards;
     public Croupier (string n, int a) : base (n, a) 
     {
