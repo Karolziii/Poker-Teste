@@ -1,18 +1,17 @@
-// m4rc3l0 - 28/04/2024
 using System;
 using poker.code.view;
 namespace poker.code.controller;
 
 /*
-Class to handle inputs from user
+Classe para lidar com entradas do usuário
 */
 public class Input
 {
     //---------------------------------------------------------------------------------
-    //behaviors
+    //Comportamentos
     //---------------------------------------------------------------------------------
     /*
-    Method to read a option from keyboard
+        Método para ler uma opção do teclado
     */
     public static int get_option()
     {
@@ -29,7 +28,7 @@ public class Input
     }
 
     /*
-    Method to read a text from keyboard
+      Método para ler um texto do teclado
     */
     public static string get_text()
     {
