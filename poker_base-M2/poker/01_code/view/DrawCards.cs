@@ -1,4 +1,3 @@
-//m4rc3lo - 2024-04-23
 using System;
 using System.Collections.Generic;
 using poker.code.model;
@@ -6,7 +5,7 @@ using poker.code.model;
 namespace poker.code.view
 {
 	/*
-	Class to draw cards elegant cards in terminal.
+	Class to draw cards elegant cards in terminal. // Desenho da cart no terminal
 	*/
 	class DrawCards
 	{
