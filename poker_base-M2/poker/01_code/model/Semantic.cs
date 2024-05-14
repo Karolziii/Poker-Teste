@@ -1,12 +1,11 @@
-//marcelo - 2024-04-28
 namespace poker.code.model;
 
 /*
- * Class to define enums e constants
+ * Classe que define enums e constants
  */
 public class Semantic
 {
-    //constants to position the cursor and paint on the screen
+    //constantes para posicionar o cursor e pintar na tela
     public const int LEFT = 0, CARD_TOP1 = 03, CARD_TOP2 = 13, FOOTER = 22;
     public enum Suit
     {
@@ -17,7 +16,7 @@ public class Semantic
     }
     // Enumeração para os valores das cartas
     public enum CardRank
-    { //to numerical value of a card
+    { //valor numérico para cada carta
         Two = 2, Three, Four, Five, Six, Seven, Eight, Nine, Ten,
         Jack, Queen, King, Ace
     }
