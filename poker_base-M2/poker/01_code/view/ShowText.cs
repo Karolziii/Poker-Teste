@@ -1,8 +1,7 @@
-// m4rc3lo - 2024-04-26
 using System;
 using System.Collections.Generic;
 using poker.code.model;
-//comentar toda a classe
+
 namespace poker.code.view
 {
     public class ShowText
@@ -16,7 +15,7 @@ namespace poker.code.view
             Console.Clear();
             Console.WriteLine("--------------------------------------------------------------------------------------");
             Console.WriteLine("Choose an option: ");
-            Console.WriteLine("1 - Game");
+            Console.WriteLine("1 - Game");                                             // Mostra texto para instrução
             Console.WriteLine("2 - Test");
             Console.WriteLine("--------------------------------------------------------------------------------------");
         }
@@ -24,7 +23,7 @@ namespace poker.code.view
         {
             Console.Clear();
             Console.WriteLine("--------------------------------------------------------------------------------------");
-            Console.WriteLine("Choose a option: ");
+            Console.WriteLine("Choose a option: ");                                    // Mostra texto para instrução
             Console.WriteLine("1 - Restart\n2 - Exit\n");
             Console.WriteLine("--------------------------------------------------------------------------------------");
         }
@@ -32,7 +31,7 @@ namespace poker.code.view
         {
             Console.Clear();
             Console.WriteLine("--------------------------------------------------------------------------------------");
-            Console.WriteLine("Testing: \t" + text);      
+            Console.WriteLine("Testing: \t" + text);                                    // Mostra texto
             Console.WriteLine("--------------------------------------------------------------------------------------");
         }
 
@@ -51,7 +50,7 @@ namespace poker.code.view
             Console.WriteLine("donte run <option>");
             Console.WriteLine("options:");
             Console.WriteLine("\t full");
-            Console.WriteLine("\t single <file_name.csv>");
+            Console.WriteLine("\t single <file_name.csv>");                  // Mostra texto de instrução 
             Console.Write("ex: ");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\tdotnet run full");
