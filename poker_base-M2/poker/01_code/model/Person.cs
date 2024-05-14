@@ -1,14 +1,14 @@
-//m4rc3lo - 2024-04-23
+
 namespace poker.code.model
-{// comentar toda a classe
+{
     public class Person
     {
         // Campos privados
-        private string name;
+        private string name; // Declaração da string chamando 'name'
         private int age;
 
         // Construtor
-        public Person(string name, int age)
+        public Person(string name, int age) // Declaração de uma string 'name' e um inteiro 'age'
         {
             this.name = name;
             this.age = age;
