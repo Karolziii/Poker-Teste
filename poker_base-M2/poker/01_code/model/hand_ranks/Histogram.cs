@@ -3,20 +3,20 @@ namespace poker.code.model.hand_ranks;
 public class Histogram
 {
     //---------------------------------------------------------------------------------
-    // instance variables / states
+    // Variáveis de instância / estados
     //---------------------------------------------------------------------------------
 	List<Card> to_organaize; // COPY cards to evaluate
-	// a list of lists, 
+	// lista da lista de cartas, 
 	List<List<Card>> histo_;
 
     //---------------------------------------------------------------------------------
-    //behaviors
+    //Comportamentos
     //---------------------------------------------------------------------------------
-	public Histogram(List<Card> c_list) // constructor / in object creation
+	public Histogram(List<Card> c_list) // Construtor / criação de objetos
 	{
 	    to_organaize = new List<Card>();
 		foreach (var c in c_list)
-		    to_organaize.Add(new Card(c)); // make a copy
+		    to_organaize.Add(new Card(c)); // faz a cópia
 
 		histo_ = new List<List<Card>>(); // create empty (list of lists)
 
@@ -27,13 +27,13 @@ public class Histogram
     }
     
 	/*
-	Method to craate a list of lists (the histogram).
+	Método que cria a lista da listas (the histogram).
 	*/
 	private void count_values()
 	{
-		for (int i = 0 ; i < to_organaize.Count; i++ )
+		for (int i = 0 ; i < to_organaize.Count; i++ ) // Itera sobre os elementos da lista 'to_organaize'.
 	    {
-		    //value variable kept the card value (number rank)
+		    //a variável 'value' mantém o valor da carta (number rank)
 			int value = to_organaize[i].get_value();
 			//the card value is used por index position
 			histo_[value].Add(new Card(to_organaize[i]));
@@ -41,9 +41,9 @@ public class Histogram
 	}
     
 	public List<List<Card>> get_histogram()
-	{return histo_;} // acces to the histogram
+	{return histo_;} // acessa o histogram
     
-	// to ordene a list of cards(untested)
+	//ordena a lista de cartas(untested)
 	public static List<Card> sort(List<Card>ordenar)
 	{
 		int loop = ordenar.Count -1;
