@@ -1,24 +1,23 @@
-//m4rc3lo - 2024-04-28
 using System;
 namespace poker.code.model;
 /*
- *  Class to abstract(represent) a card.
+ *  Classe abstrata para representar carta (Card).
 */
 public class Card
 {
 
     //---------------------------------------------------------------------------------
-    //states (properties)
+    /Estados (propriedades)
     //---------------------------------------------------------------------------------
-    public Semantic.Suit suit_ {get; private set;} // represents the suit
-    public Semantic.CardRank rank_ {get; private set;} // represents the numerical value
+    public Semantic.Suit suit_ {get; private set;} // representa suit
+    public Semantic.CardRank rank_ {get; private set;} // representa valor numérico
     public int owner {get; set;}
    
     //---------------------------------------------------------------------------------
-    //behaviors
+    //Comportamentos
     //---------------------------------------------------------------------------------
     
-    //constructors
+    //Construtor
     public Card(Semantic.Suit s, Semantic.CardRank r)
     {// to deck build
         this.suit_ = s;
@@ -27,7 +26,7 @@ public class Card
     }
     
     public Card(Semantic.Suit s, Semantic.CardRank r, int o)
-    {// to file cards
+    {// armazena cartas
         this.suit_ = s;
         this.rank_ = r;
         this.owner = o;
