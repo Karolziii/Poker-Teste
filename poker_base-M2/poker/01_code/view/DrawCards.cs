@@ -5,7 +5,7 @@ using poker.code.model;
 namespace poker.code.view
 {
 	/*
-	Class to draw cards elegant cards in terminal. // Desenho da cart no terminal
+	Class to draw cards elegant cards in terminal. // Desenho da carta no terminal
 	*/
 	class DrawCards
 	{
@@ -34,7 +34,7 @@ namespace poker.code.view
 		}
 		
 		/*
-		Display suit and value of the card inside its outline.
+		// Exibe o naipe e o valor da carta dentro de seu contorno
 		*/		
 		public static void DrawCardSuitValue(Card card, int xcoor, int ycoor)
 		{
@@ -68,7 +68,7 @@ namespace poker.code.view
 					break;
 			}
 
-			//display the encoded character and value of the card
+			//exibe o caractere codificado e o valor do cartão
 			Console.SetCursorPosition(x + 3, y + 2);
 			string simbol_ = "";
 			
