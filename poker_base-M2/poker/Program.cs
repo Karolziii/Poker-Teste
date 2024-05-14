@@ -1,5 +1,4 @@
-﻿// m4rc3lo - 16/04/2024 - Herança
-// m4rc3lo - 28/04/2024 - Projeto Base(Poker - M2S)
+
 using System;
 using poker.code.controller;
 //using poker.code.model;
