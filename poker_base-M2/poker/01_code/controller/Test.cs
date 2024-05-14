@@ -80,7 +80,11 @@ public class Test
                 draw_single(straightCards);
                 break;
             case "06.csv":
-                ShowText.print_text("Not implemented yet!");
+                Flush flush = new Flush(histogram.get_histogram());
+                check_ = flush.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name = "04.csv - Flush";
+                draw_single(flush);
                 break;
             case "07.csv":
                 FullHouse full = new FullHouse(histogram.get_histogram());
@@ -97,7 +101,11 @@ public class Test
                 draw_single(four);
                 break;
             case "09.csv":
-                ShowText.print_text("Not implemented yet!");
+                StraightFlush straightFlush = new StraightFlush(histogram.get_histogram());
+                check_ = straightFlush.check();
+                Console.WriteLine("check_: " + check_);
+                rank_name = "09.csv - StraightFlush";
+                draw_single(straightFlush);
                 break;
             case "10.csv":
                 RoyalFlush royal = new RoyalFlush(histogram.get_histogram());
