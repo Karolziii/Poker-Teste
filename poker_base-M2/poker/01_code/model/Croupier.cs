@@ -5,14 +5,15 @@ using System.Collections.Generic;
 namespace poker.code.model;
 public class Croupier : Person 
 {
-    // Declaração de um campo privado chamado cards, que é uma pilha (Stack) de objetos do tipo Card
+    // Atributo privado para armazenar as cartas do croupier
     private Stack<Card> cards;
     public Croupier (string n, int a) : base (n, a) 
     {
-        cards = new Stack<Card> ();
-        creat_deck();
+        cards = new Stack<Card> (); // Inicializa o deck como uma pilha vazia
+        creat_deck(); // Cria o deck de cartas
     }
 
+    // Método privado para criar um novo deck de cartas
     private void creat_deck()
     {
         // Limpar o deck existente
@@ -29,6 +30,7 @@ public class Croupier : Person
         }
     }
     
+    // Método público para embaralhar o deck de cartas
     public void shuffle()
     {
         var random = new Random();
@@ -51,6 +53,7 @@ public class Croupier : Person
         }
     }
     
+    // Método público para obter o deck de cartas
     public Stack<Card> get_deck()
     {
         return cards;
