@@ -5,7 +5,7 @@ using poker.code.model;
 namespace poker.code.view
 {
 	/*
-	Class to draw cards elegant cards in terminal. // Desenho da carta no terminal
+	Desenha as bordas das cartas
 	*/
 	class DrawCards
 	{
@@ -20,16 +20,16 @@ namespace poker.code.view
 			int y = ycoor;
 			
 			Console.SetCursorPosition(x, y);
-			Console.Write(" __________\n"); //top edge of the card
+			Console.Write(" __________\n"); // Borda superior da carta
 			
 			for (int i = 0; i < 7; i++)
 			{
 				Console.SetCursorPosition(x,y + 1 + i);
 				
 				if ( i != 6)
-					Console.WriteLine("|          |");//left and right edges of the cards
+					Console.WriteLine("|          |");// Bordas esquerda e direita da carta
 				else
-					Console.WriteLine("|__________|");//bottom edge of the card
+					Console.WriteLine("|__________|");// Borda inferior da carta
 			}
 		}
 		
@@ -82,7 +82,7 @@ namespace poker.code.view
 		}
 
 		private static int parse_suite(string suite)
-		{// parse enum rank to numerical value
+		{// converte o naipe para um valor numérico
 			if (suite == "Hearts")
 				return 1;
 			else if (suite == "Diamonds")
@@ -133,18 +133,19 @@ namespace poker.code.view
 			//UnicodeEncoding enc = new UnicodeEncoding(true, false, false);
 			Console.OutputEncoding = System.Text.Encoding.UTF8; 
 			
-			//display player hand
+			// Exibe a mão do jogador
 			Console.ForegroundColor = ConsoleColor.White;
 			//Console.WriteLine("PLAYER'S HAND");
 			for (int i = 0; i < list.Count; i++)
 			{
 				DrawCards.DrawCardOutline(x, y);
 				DrawCards.DrawCardSuitValue(list[i], x, y);
-				x++; //move to the right
+				x++; // Move para a direita
 			}
 			
-			y = 10; //move the row of computer cards below the players cards
-			x = 0; //reset x position
+			// Move a linha das cartas do computador abaixo das cartas do jogador
+			y = 10; 
+			x = 0; 
 			Console.SetCursorPosition(x, y);
 			Console.ForegroundColor = ConsoleColor.White;
 
