@@ -1,4 +1,4 @@
-//m4rc3lo - 28/04/2024
+
 using poker.code.model;
 using poker.code.view;
 namespace poker.code.controller;
