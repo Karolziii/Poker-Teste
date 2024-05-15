@@ -5,26 +5,26 @@ namespace poker.code.controller;
 using System.Runtime.InteropServices;
 
 /*
-Class for loading files in test mode
-a static class don't necessarily create object
+// Classe para carregar arquivos em modo de teste
+// Uma classe estática não necessariamente cria objetos
 */
 public class Load
 {
     //---------------------------------------------------------------------------------
-    //behaviors
+    //Comportamentos
     //---------------------------------------------------------------------------------
     
-    /*this one revceive by parameter (file path)1
-    return a list of cards build by file read
+    /*Este método recebe como parâmetro o nome do arquivo.
+       Retorna uma lista de cartas construídas pela leitura do arquivo.
     */
     public static List<Card> load_hand(string name)
     {
-        List<Card> cards = new List<Card>();
-        string[] readText;        
-        string path_file = Directory.GetCurrentDirectory();
+        List<Card> cards = new List<Card>(); // Lista para armazenar as cartas
+        string[] readText; // Array para armazenar as linhas lidas do arquivo        
+        string path_file = Directory.GetCurrentDirectory(); // Obtém o diretório atual
             
-        //testa em qual sistema operacional o código está executando
-        //linux e windows tem diferença na escrita do caminho
+        // Verifica em qual sistema operacional o código está sendo executado
+        // Linux e Windows têm diferenças na escrita do caminho
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             path_file += "/02_data/"; // linux way
         else
