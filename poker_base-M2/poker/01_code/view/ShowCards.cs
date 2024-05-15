@@ -53,7 +53,7 @@ public class ShowCards
         }
             }
             ctrl++;
-        }
+        
         Console.WriteLine("---------------------------------------------------");
         Console.WriteLine("Press any key to continue");                             // Mostra texto de instrução
         Console.WriteLine("---------------------------------------------------");
