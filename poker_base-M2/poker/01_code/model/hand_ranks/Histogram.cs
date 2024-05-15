@@ -16,34 +16,34 @@ public class Histogram
 	{
 	    to_organaize = new List<Card>();
 		foreach (var c in c_list)
-		    to_organaize.Add(new Card(c)); // faz a cópia
+		    to_organaize.Add(new Card(c));  // Faz uma cópia
 
-		histo_ = new List<List<Card>>(); // create empty (list of lists)
+		histo_ = new List<List<Card>>(); // Cria uma lista vazia (lista de listas)
 
 		for (int i = 0 ; i < 15 ; i++)				
-		    histo_.Add(new List<Card>()); //create empty (a list of card)
-
-        count_values(); // make the histogram
+		    histo_.Add(new List<Card>()); // Cria uma lista vazia (uma lista de cartas)
+        count_values(); // Cria o histograma
     }
     
 	/*
-	Método que cria a lista da listas (the histogram).
+	// Método privado para criar o histograma
 	*/
 	private void count_values()
 	{
 		for (int i = 0 ; i < to_organaize.Count; i++ ) // Itera sobre os elementos da lista 'to_organaize'.
 	    {
-		    //a variável 'value' mantém o valor da carta (number rank)
+		    // Obtém o valor da carta (número)
 			int value = to_organaize[i].get_value();
-			//the card value is used por index position
+			// Adiciona a carta à lista correspondente no histograma
 			histo_[value].Add(new Card(to_organaize[i]));
 		}
 	}
     
+	// Método público para acessar o histograma
 	public List<List<Card>> get_histogram()
 	{return histo_;} // acessa o histogram
     
-	//ordena a lista de cartas(untested)
+	// Método estático para ordenar uma lista de cartas
 	public static List<Card> sort(List<Card>ordenar)
 	{
 		int loop = ordenar.Count -1;
@@ -60,7 +60,7 @@ public class Histogram
 			{
 				if (ordenada[j].get_value() > ordenada[j+1].get_value())
 				{
-					swap(j, ordenada);
+					swap(j, ordenada); // Realiza a troca
 					swapped = true;
 				}
 				//Console.WriteLine("For2");
@@ -72,7 +72,7 @@ public class Histogram
 		return ordenada;
 	}
 
-	//to suport sort method
+	// Método privado para suportar o método de ordenação
 	private static void swap(int index, List<Card> cards)
 	{	
 		int i = index;
