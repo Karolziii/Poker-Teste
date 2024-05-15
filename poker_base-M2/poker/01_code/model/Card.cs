@@ -7,7 +7,7 @@ public class Card
 {
 
     //---------------------------------------------------------------------------------
-    /Estados (propriedades)
+    //Estados (propriedades)
     //---------------------------------------------------------------------------------
     public Semantic.Suit suit_ {get; private set;} // representa suit
     public Semantic.CardRank rank_ {get; private set;} // representa valor numérico
