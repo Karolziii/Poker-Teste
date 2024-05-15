@@ -1,7 +1,7 @@
 
 using System;
 using poker.code.controller;
-//using poker.code.model;
+using poker.code.model;
 //using poker.code.model.hand_ranks;
 using poker.code.view;
 
@@ -30,8 +30,10 @@ namespace poker
                         // only in M3
                         break;
                     case 2: 
-                        ShowText.print_text("Test - Not implemented yet.");
-                        // run all hand ranks files ...
+                        // Criar um objeto de teste
+                        Test test = new Test("dummy", new List<Card>()); // Dummy values for constructor
+                        // Executar todos os testes em sequência
+                        test.full_test();
                         break;
                 }
             }
