@@ -135,30 +135,40 @@ namespace poker.code.view
 			
 			// Exibe a mão do jogador
 			Console.ForegroundColor = ConsoleColor.White;
-			//Console.WriteLine("PLAYER'S HAND");
-			for (int i = 0; i < list.Count; i++)
-			{
-				DrawCards.DrawCardOutline(x, y);
-				DrawCards.DrawCardSuitValue(list[i], x, y);
-				x++; // Move para a direita
-			}
-			
-			// Move a linha das cartas do computador abaixo das cartas do jogador
-			y = 10; 
-			x = 0; 
-			Console.SetCursorPosition(x, y);
-			Console.ForegroundColor = ConsoleColor.White;
 
-			//display computer hand
-			/*Console.ForegroundColor = ConsoleColor.White;
-			Console.SetCursorPosition(x, 10);
-			Console.WriteLine("COMPUTER'S HAND");
-			for (int i = 5; i < 10; i++)
+			int numCardsToDisplay = Math.Min(list.Count, 7);
+
+
+   			 // Loop através das cartas na lista e exibe as sete primeiras cartas
+			for (int i = 0; i < numCardsToDisplay; i++)
 			{
-				DrawCards.DrawCardOutline(x, y);
-				DrawCards.DrawCardSuitValue(sortedComputerHand[i -5], x, y);
-				x++; //move to the right
-			}*/
+				// Verifica se a posição y ultrapassa os limites do console
+				if (y + 8 >= Console.WindowHeight)
+				{
+					Console.WriteLine("Erro: Não é possível exibir todas as cartas. A altura do console é muito pequena.");
+					return;
+				}
+
+				if (i < list.Count) // Verifica se ainda há cartas para exibir
+				{
+				
+					// Desenha a borda da carta
+					DrawCards.DrawCardOutline(x, y);
+					
+					// Desenha o símbolo e o valor da carta
+					DrawCards.DrawCardSuitValue(list[i], x, y);
+
+				}
+				
+				// Move para a próxima posição à direita
+				x++; 
+
+				if (x >= Console.WindowWidth / 12)  // Se atingir a última coluna do console, move para a próxima linha e reinicia a contagem da coluna
+				{
+					x = 0;
+					y += 8; // Incrementa a posição y para a próxima linha
+				}
+			}
 		}
 	}
 }

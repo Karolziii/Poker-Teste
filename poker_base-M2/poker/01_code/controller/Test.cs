@@ -31,9 +31,18 @@ public class Test
     
     public void full_test()
     {
-        //vocês devem implementar uma lógica que mostre a execução de testes
-        //um para cada mão de poker possível (10 ao total)
-    }
+        // Lista de arquivos CSV
+        string[] files = { "01.csv", "02.csv", "03.csv", "04.csv", "05.csv", "06.csv", "07.csv", "08.csv", "09.csv", "10.csv" };
+
+        // Itera sobre os arquivos
+        foreach (string file in files)
+        {
+            // Cria um objeto de teste para o arquivo atual
+            Test test = new Test(file, Load.load_hand(file));
+            // Define o nome do arquivo
+            test.single_test();
+        }
+    }    
 
     /*
     Método para fazer e mostrar o test single (one file.csv)
